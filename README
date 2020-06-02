@@ -1,0 +1,35 @@
+Mihaila Cosmin-Constantin
+315 CB
+
+1. Algoritmul Iterative:
+	La inceput citim numarul N, dupa care construim matricea de adiacenta.
+Fiecare linie reprezinta un vector de link-uri, in care daca o pagina i are
+link catre o pagina de indice j, atunci A(i, j) = 1, altfel, este egal cu 0.
+Punem pe diagonala principala valoarea 0, deoarece ignoram la calcuul paginile
+care au valori spre ele insasi. Construim matricea diagonala K, punand pe
+diagonala principala numarul de pagini spre care are legatura pagina cu indicele
+liniei pe care ne aflam. Calculam M cu formula din algoritm. Dupa care Calculam 
+prima iteratie a lui R, urmand sa intram intr-un while infinit, unde vom iesii
+abia cand diferenta dintre R-ul precedent si cel nou este mai mica decat eroarea
+data.
+
+2. Algoritmul Algebraic
+	Pana la calcularea primei iteratie a lui R, este identic cu algoritmul 
+Iterative. La sfarsit Construim vectorul R conform formulei date, utilizand
+functia PR_Inv(o functie ce foloseste algoritmul Gram-Schmidt pentru descompunerea
+Q R, si rezolva sistemele superior triangulate pentru a afla inversa matricei date)
+pentru a afla inversa unei matrice.
+
+3. Gradul de Apartenenta
+	Calculeaza a si b din continuitatea functiei si intoarce, in functie de
+intervalul pe care se afla, valoarea y.
+
+4. Functia PageRank
+	Citim numarul N, dupa care folosim functia fskipl pentru a ajunge la
+penultima linie, pentru a citi val1 si val2. Folosim strcat pentru a adaugat .out
+la sfaristul fisierului de output. Apelam cele doua functii, Iterative si Algebraic,
+si le afisam rezultatul. Folosim functia sort pentru a sorta descrescator vectorul
+R2( output-ul functiei Algebraic) si pentru a-l pune(sortat) in PR1; in acelasi timp
+salvand indicii vechi in I pentru a ii folosii la afisare. Apelam functia Apartenenta
+pentru fiecare valoare din PR1 si afisam rezultatul.
+		
